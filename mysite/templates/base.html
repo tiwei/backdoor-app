@@ -1,0 +1,338 @@
+{% spaceless %}
+{% load static %}
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+{% block head %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>
+{% block title %}
+        Crowdcademy
+{% endblock title %}
+    </title>
+
+{% block metadata %}
+    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
+    <meta name="author" content="{% block meta_author %}{% endblock meta_author %}">
+{% endblock metadata %}
+
+{% block mobile_viewport_optimization %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock mobile_viewport_optimization %}
+
+{% block favicons %}
+<link rel="shortcut icon" href="http://d17nm94bmu67w2.cloudfront.net/static/favicon.ico" />
+{% endblock favicons %}
+
+{% block css %}  
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
+{% endblock css %}
+
+    <style>
+{% block extra_css %}
+.container {
+    width: 1100px !important;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -36px; {# 86px #}
+}
+.push {
+  padding-top: 36px; {# 40px #}
+  height: 0px;
+} 
+#wrapper > .container {
+    padding-top: 40px;
+}
+.navbar-fixed-top {
+    opacity: 0.8;
+}
+.navbar .brand {
+    background-color: #DA4D2F; /* #FF8A05 #DE4110 */ /* with opacity #E17159 */
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    padding: 5px 18px 9px;
+    margin-left: 0px !important;
+}
+.navbar-search {
+    margin-top: 5px;
+}
+#id_q {
+    cursor: pointer;
+    height: 15px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    padding: 5px 15px 4px 30px;
+}
+#id_q:focus {
+    margin-top: 3px;
+}
+.navbar .nav > li > a {
+    line-height: 24px;
+    padding: 7px 10px 9px;
+}
+.navbar .nav .dropdown-toggle .caret {
+    margin-top:12px;
+}
+.navbar-search .search-query {
+    padding-left: 33px;
+}
+.navbar-search .icon-search {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings-white.png");
+}
+.navbar-search .search-query:focus, .navbar-search .search-query.focused {
+    padding-left: 30px;
+}
+.search-query:focus + .icon-search {
+    background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");
+}
+.footer {
+    background-color: #1B1B1B;
+    background-image: -moz-linear-gradient(center top , #222222, #111111);
+    height: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    {#padding-top: 46px;#}
+}
+#footer-nav {
+    margin: 6px 0px 0px;
+}
+#footer-nav > li {
+    color: #444444;
+    display: inline;
+    line-height: 24px;
+    margin-right: 42px;
+}
+#footer-nav > li > a { 
+    padding: 0px;
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: none;
+}
+#footer-nav > li > a:hover {
+    color: #FFFFFF;
+}
+#header-tagline {
+    color: #FFFFFF;
+    font-family: 'Architects Daughter',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 19px;
+    line-height: 25px;
+    padding: 10px 15px 10px 15px;
+}
+.search {
+    font-family: 'Architects Daughter',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 8px 5px 7px 20px !important;
+}
+#account {
+    margin-right: 25px;
+}
+#account > li > a {
+    color: #0088CC !important;
+    font-size: 13px;
+    font-weight: 900;
+}
+#account > li > a:hover {
+    color: #FFFFFF !important;
+}
+#feedback_widget {
+    top: 150px;
+}
+#feedback_tab button {
+    background-color: #1B1B1B;
+    border: 2px solid #333333;
+    border-radius: 0 0 3px 3px;
+    color: #0088CC;
+    font-size: 23px;
+    font-weight: 700;
+    height: 38px;
+    letter-spacing: -0.05em;
+    line-height: 23px;
+    opacity: 0.8;
+    padding: 3px 0 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 115px;
+}
+#feedback_tab button:hover {
+    color: #FFFFFF;
+    background-color: #1B1B1B;
+}
+#feedback_panel {
+    background-color: #1B1B1B;
+    color: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 0 3px 3px 0;
+}
+#feedback_submit {
+    padding: 2px 5px;
+    margin-right: 2px;
+}
+#feedback_form > button {
+    padding: 1px 5px 0px;
+}
+{% endblock extra_css %}
+    </style>
+
+{% block modernizr %}
+    <script src="{{ STATIC_URL }}js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+{% endblock modernizr %}
+
+{% block extra_head %}
+{% endblock extra_head %}
+
+</head>
+{% endblock head %}
+
+{% block body %}
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+{% block facebook %}
+{% endblock facebook %}
+
+<div id="wrapper">
+<!-- Header ================================================== -->
+{% block navbar %}
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="{% url home %}">backdoor-app</a>
+            {% block nav_collapse %}
+            <div class="nav-collapse">
+                <ul style="height: 40px;" class="nav">
+                    <li><a style="padding-right: 10px !important;" class="search" href=""><i style="vertical-align: middle;" class="ficon-caret-right"></i>Most popular</a></li>
+                    <li><a style="padding-right: 10px !important;" class="search" href=""><i style="vertical-align: middle;" class="ficon-caret-right"></i>Browse categories</a></li>
+                    <li><a style="cursor: pointer;" class="search" onclick="$('#search-bar').toggle();$('#search-bar input').focus();"><i style="vertical-align: middle;" class="ficon-caret-right"></i>Search</a></li>         
+                </ul>
+                {% block nav_search %}
+                <form id="search-bar" style="display: none;" action="/search/?q=" class="navbar-search">
+                    <input type="text" id="id_q" class="search-query span2" placeholder="" name="q" rel="tooltip" title="Search is currently disabled, please use navigation.">
+                    <div style="margin-top: 1px;" class="icon-search"></div>
+                    <button type="submit" class="btn-navbar">Search</button>
+                </form>
+                {% endblock nav_search %}
+                {% block nav_login %}
+                <ul id="account" class="nav pull-right">
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url userena_profile_detail username=request.user %}">Account</a></li>
+                    <li style="color: #444; font-size: 16px; margin: 10px 12px 0;">|</li>
+                    <li><a href="">Log out</a></li>
+                    {% else %}
+                    <li><a href="">Log in</a></li>
+                    <li style="color: #444; font-size: 16px; margin: 10px 12px 0;">|</li>
+                    <li><a href="">Sign up</a></li>
+                    {% endif %}
+                </ul>
+                {% endblock nav_login %}
+            </div>
+            {% endblock nav_collapse %}
+        </div>
+    </div>
+</header>
+{% endblock navbar %}
+<!-- END Header ================================================== -->
+
+<!-- Content ================================================== -->
+        <div class="container">
+        {% block content %}
+        {% endblock content %}
+        </div>
+        <div class="push"><!--//--></div>
+    </div>
+<!-- END Content ================================================== -->
+
+<!-- Footer ================================================== -->
+{% block footer %}
+<footer class="footer">
+    <div class="container">
+        <ul id="footer-nav" class="">
+            <li><a style="font-size: 10px; color: #CCCCCC; font-weight: 300;" href="">&copy; Spearhead Venture UG (H.B.) 2012</a></li>
+            <li><a href="">About</a></li>
+            <li>|</li>
+            <li><a href="">FAQ</a></li>
+            <li>|</li>
+            <li><a href="">Developer Blog</a></li>
+            <li>|</li>
+            <li><a href="">Jobs</a></li>
+            <li>|</li>
+            <li><a href="">Terms</a></li>
+            <li>|</li>
+            <li><a href="">Privacy</a></li>
+        </ul>
+    </div>
+</footer>
+{% endblock footer %}
+<!-- END Footer ================================================== -->
+
+<!-- Le javascript =============================================== -->
+{% block js %}  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+{# <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.7.2.min.js"><\/script>')</script> #}
+
+<script src="{{ STATIC_URL }}js/libs/jquery-1.7.2.min.js"></script>  
+<script src="{{ STATIC_URL }}js/libs/bootstrap.min.js"></script>
+<script src="{{ STATIC_URL }}js/plugins.js"></script>
+<script src="{{ STATIC_URL }}js/script.js"></script>
+<script src="{{ STATIC_URL }}js/csrf_ignore.js"></script>
+
+{% endblock js %}
+
+
+{% block extra_js %}
+<script>
+/*global $*/
+"use strict";
+$(function () {
+    if ($.browser.msie) {
+        alert("Crowdcademy has not been optimized for Microsoft Internet Explorer. Some features might not be available to you. Please use Firefox or Chrome for full browser support.");
+    }
+});
+</script>
+<script>
+/*global $*/
+"use strict";
+$(function () {
+    $(".search-query").tooltip({'placement': 'bottom'});
+});
+</script>
+{% endblock extra_js %}
+
+
+{% block google_analytics %}
+{% comment %}
+    <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+{% endcomment %}
+{% endblock google_analytics %}
+<!-- Le javascript =============================================== -->
+
+</body>
+{% endblock body %}
+</html>
+{% endspaceless %}

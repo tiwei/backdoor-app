@@ -1,0 +1,287 @@
+/* ===== Primary Styles ========================================================
+   Author: Tim Weiss
+   ========================================================================== */
+html, body {
+    height: 100%;
+} 
+.extra-bold {
+  font-weight: 900;
+}
+.form-tooltip:hover {
+  background-color: #3D6199;
+}
+.form-tooltip {
+    background-color: #89A4CC;
+    border-radius: 10px 10px 10px 10px;
+    color: White;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    height: 18px;
+    left: -10px;
+    line-height: 19px;
+    position: relative;
+    text-align: center;
+    top: 4px;
+    width: 18px;
+}
+.scribble {
+    color: #999999;
+    font-family: 'Architects Daughter';
+    font-size: 20px !important;
+}
+.btn-action {
+    float: right;
+    font-size: 18px;
+    padding: 7px 5px 2px;
+    margin-left: 10px;
+}
+hr {
+  margin: 15px 0;
+}
+h3.edit-page {
+  padding-left: 158px;
+  margin: 0px 0px 15px 0px;
+}
+input.edit-page {
+  margin-left: 155px;
+}
+.box-header {
+border-bottom: 1px solid #DDDDDD;
+    color: #AAAAAA !important;
+    font-size: 37px;
+    line-height: 41px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+}
+.box-alert {
+  margin: 15px 0px 0px 0px;
+}
+#tags {
+    margin-top: 10px;
+}
+.nav-tabs > li > a:focus, #pillTab > li > a:focus {
+    outline: none;
+}
+.btn:focus {
+  outline: none;
+}
+#myTab > li a:focus {
+  outline: none;
+}
+.label-tag {
+    margin: 0 8px 0 0;
+    padding: 4px 6px 4px 5px;
+    background-color: #E17159;
+}
+.btn-icon {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 3px 7px !important;
+}
+.info-box {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    padding: 12px 25px 15px 25px;
+    background-color: #FBFBFB;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #F5F5F5);
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+}
+.info-box dt {
+    width: 100px;
+}
+.info-box dd {
+    margin: 0 0 5px 110px;
+}
+.box-right {
+    float: right !important;
+}
+.box-left {
+    float: left !important;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+div .modal > div .alert {
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+.modal-body {
+  padding: 0;
+}
+legend {
+    margin-bottom: 10px 0px;
+    text-align: center;
+    border-style: none none none;
+}
+.form-actions {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 17px 20px 18px;
+}
+form {
+    margin: 0px;
+}
+.box-button {
+    float:right !important;
+}
+.update-right {
+  margin-left: 8px; 
+  position: relative; 
+  top: 0px;
+}
+.update-left {
+  margin-right: 8px; 
+  position: relative; 
+  top: 0px;
+}
+.navbar .nav > li > a {
+  line-height: 20px;
+}
+
+.rating-active {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+  font-size:20px
+}
+.rating {
+  unicode-bidi:bidi-override;
+  direction:ltr;
+  font-size:20px
+}
+span.star {
+  font-family:FontAwesome;
+  font-weight:normal;
+  font-style:normal;
+  display:inline-block
+}
+span.star-full {
+  font-family:FontAwesome;
+  font-weight:normal;
+  font-style:normal;
+  display:inline-block  
+}
+span.star-empty {
+  font-family:FontAwesome;
+  font-weight:normal;
+  font-style:normal;
+  display:inline-block  
+}
+span.star:hover {
+  cursor:pointer
+}
+span.star:before {
+  content:"\f006";
+  padding-right:5px;
+  color:#999
+}
+span.star:hover:before, span.star:hover ~ span.star:before {
+  content:"\f005";
+  color:#e3cf7a
+}
+span.star-full:before {
+  content:"\f005";
+  padding-right:5px;
+  color:#e3cf7a
+}
+span.star-empty:before {
+  content:"\f005";
+  padding-right:5px;
+  color:#999
+}
+.ficon-bullet {
+    margin-right: 5px;
+}
+/* dataTables */
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+} 
+table.table thead .sorting { background: url('../../img/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('../../img/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('../../img/sort_desc.png') no-repeat center right; }
+table.table thead .sorting_asc_disabled { background: url('../../img/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('../../img/sort_desc_disabled.png') no-repeat center right; }
+div.dataTables_filter label {
+    float: right;
+}
+div[id*="paginate"] {
+  float: right;
+}
+.modal {
+  display: none;  /*stops problem that occurs when there are two modals on the same page*/
+}
+/* END */
+
+.info-label {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+    color: #333333;
+    margin-bottom: 2px;
+    clear: both;
+}
+#editable-description, #editable-why, #editable-level, #editable-category, #editable-tags, #editable-module-title, #editable-module-description, .editable-modules-title, .editable-modules-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* jEditable */
+/*.charcounter {
+    font-size: 11px; 
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; 
+    color: rgb(153, 153, 153); 
+    text-align: left; 
+    opacity: 1;
+    float: right;
+}*/
+.charcounter {
+    font-size: 11px; 
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; 
+    color: rgb(153, 153, 153);  
+    float: left;
+}
+.jeditable-textarea > textarea, .jeditable-textarea-long > textarea, .jeditable-text > input, .jeditable-select > select {
+    color: #555555;
+    font-size: 14px;
+    line-height: 19px;
+    margin-right: 6px;
+    margin-bottom: 0px;
+}
+.jeditable-textarea > button, .jeditable-textarea-long > button, .jeditable-text > button, .jeditable-select > button {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: -1px;
+    padding: 3px 5px;
+}
+.jeditable-select > button {
+    margin-top: -10px;
+}
+.jeditable-textarea-long > span.charcounter {
+    color: #999999;
+    float: right;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    left: -410px;
+    margin-left: 0;
+    opacity: 1;
+    position: relative;
+    text-align: left;
+}
+/* END */
+
+/* Bootbox */
+div.bootbox > div.modal-body {
+  padding: 25px 25px 15px;
+}
+/* END */
